@@ -1,17 +1,13 @@
 ru\newhope\config\DataSourceConfiguration.class
-ru\newhope\city\CityMapperImpl.class
 ru\newhope\core\Mapper.class
-ru\newhope\city\CityDto.class
 ru\newhope\volunteer\VolunteerController.class
 ru\newhope\core\service\AbstractServiceImpl.class
 ru\newhope\volunteer\VolunteerRepository.class
 ru\newhope\FoodSharingServiceApplication.class
 ru\newhope\config\SwaggerConfig.class
 ru\newhope\city\CityController.class
-ru\newhope\city\CityService.class
 ru\newhope\core\Repository.class
 ru\newhope\city\CityEntity.class
 ru\newhope\city\CityRepository.class
 ru\newhope\volunteer\VolunteerEntity.class
-ru\newhope\city\CityMapper.class
 ru\newhope\core\service\AbstractService.class

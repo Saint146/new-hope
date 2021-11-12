@@ -13,8 +13,6 @@ import java.util.List;
 @RestController
 @Api(value = "Города")
 public class CityController {
-    //private final AbstractService<CityDto> service;
-
     @Autowired
     CityRepository cityRepository;
 

@@ -1,10 +1,7 @@
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\config\SwaggerConfig.java
-D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityMapper.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volunteer\VolunteerController.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\service\AbstractService.java
-D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityMapperImpl.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\Repository.java
-D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityService.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\service\AbstractServiceImpl.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volunteer\VolunteerRepository.java
@@ -12,6 +9,5 @@ D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityR
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\Mapper.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityController.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\FoodSharingServiceApplication.java
-D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityDto.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\config\DataSourceConfiguration.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volunteer\VolunteerEntity.java
