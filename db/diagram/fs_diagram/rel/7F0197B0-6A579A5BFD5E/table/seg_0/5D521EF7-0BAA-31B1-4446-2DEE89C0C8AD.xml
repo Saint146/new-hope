@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D521EF7-0BAA-31B1-4446-2DEE89C0C8AD" name="Product_set_history">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[История набора подуктов]]></commentInRDBMS>
+<generatorID>A5E970DD-813E-2ECA-9CF7-870903F15673</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="BAF97A37-4987-181A-0AF7-180109CFD99C">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>D60A11B5-2E8D-CCF6-2154-5D7E1AFBAB97</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Product_set_id" id="930F6471-46E5-55C7-8726-280049CB46BF">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID Продуктового набора]]></commentInRDBMS>
+<generatorID>6EEC59DE-2D79-2559-C4DF-EB6ECA69E11E</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89BD00F9-B975-3FB4-C82E-E1278ED04BA5" referredColumn="83C8A19C-4E0E-3041-CC4A-364ACCBC17F6"/>
+</associations>
+</Column>
+<Column name="Product_set_status_id" id="113BA1A6-ADA5-34D8-B0E0-02E47D21079E">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID Статуса]]></commentInRDBMS>
+<generatorID>A2BE73F1-F7DA-643D-615A-0A90E13D3399</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54101FF3-6DA1-3544-54DC-10715BDF8BE1" referredColumn="3AF6546F-08B9-AC20-9653-87BE18307646"/>
+</associations>
+</Column>
+<Column name="date_status" id="168DD513-7BA4-AD97-38F4-2ACC91246CA9">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата смены статуса]]></commentInRDBMS>
+<generatorID>B1106D1C-B101-40AE-7450-7AB127F39BC1</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ED0459AA-A31C-A4A4-29F8-5692E2C06553" name="Product_set_history_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>E8AC6DC2-F98D-55BA-2177-A1DBE705FF96</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAF97A37-4987-181A-0AF7-180109CFD99C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9018BE1-6F1F-4C42-317E-0EB089006A8E" name="Product_set_history_Product_set_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>4AE25CB4-FF7F-9F15-AA47-243B5A7F7CEE</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="930F6471-46E5-55C7-8726-280049CB46BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1256FEE2-B8E8-7F31-CE73-53C23756F1F3" name="Product_set_history_Product_set_status_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>59956E74-2293-6FF0-C691-EBB7C4591B17</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="113BA1A6-ADA5-34D8-B0E0-02E47D21079E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

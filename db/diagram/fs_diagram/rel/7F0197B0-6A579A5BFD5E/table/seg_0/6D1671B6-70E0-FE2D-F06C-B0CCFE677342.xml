@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6D1671B6-70E0-FE2D-F06C-B0CCFE677342" name="Product_item">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Элемент продуктового набора]]></commentInRDBMS>
+<generatorID>8AC60D5D-0026-504F-56D8-AA38A2E053AC</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="34425533-CA1E-9C9A-0F6A-C932B98AC28D">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>4DD71C5E-8D2C-05A0-C941-EE0128E162AA</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="C81123AE-285D-ED15-D1BF-93CB09504BD4">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>CB2F3600-C526-D732-57AA-0512EF92CED8</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="count" id="4EDC6BAD-769E-153B-3593-F57C671A8017">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Количество]]></commentInRDBMS>
+<generatorID>80F72349-889D-8DF1-29F6-C50853669128</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mass" id="A9D2DC25-36A4-C9DE-3EDA-A46DD2EB0B93">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Масса, кг]]></commentInRDBMS>
+<generatorID>3A77F5FE-C8B7-4467-4B56-8E7557B5FBD8</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1111AE09-DEC8-4C74-52CB-03B25EB9C239" name="Product_item_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>9D6FAD5C-2E91-EACF-572C-988CD92B0A04</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34425533-CA1E-9C9A-0F6A-C932B98AC28D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

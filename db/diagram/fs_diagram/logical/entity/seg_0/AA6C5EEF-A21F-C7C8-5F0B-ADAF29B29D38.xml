@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AA6C5EEF-A21F-C7C8-5F0B-ADAF29B29D38" name="Product_set">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 15:22:16 UTC</createdTime>
+<comment><![CDATA[Набор продуктов]]></comment>
+<commentInRDBMS><![CDATA[Набор продуктов]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="6175A217-820A-2F06-B75C-825E1CB95624">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 15:23:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_produce" id="A2F1CB44-F076-8B96-C1CC-06F76D0C2350">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:11:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата производства набора]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mass" id="C43DECCB-0F07-FCD9-E2C1-0344C503DDA0">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:10:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Масса, кг.]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="6E80C4C3-BA21-50BE-1F5C-963CF2379BF2">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:20:11 UTC</createdTime>
+<generatorID>503632C9-87FE-8AEC-CFFF-A73037CAEBDD</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>ADC8E062-69E3-8DFB-F3D3-63038D94C267</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="F8E6B2C5-AB48-F8DD-F1BB-F98CFE7A8210">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:20:18 UTC</createdTime>
+<generatorID>63DF04EB-0A62-2F14-DEDF-6732292C84FD</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>4DD71C5E-8D2C-05A0-C941-EE0128E162AA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="volunteer_count" id="3AE7C7ED-4984-81D6-EF18-EDA383ADFBAB">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:41:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Сколько волонтёров требуется для распространения набора]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id3" id="AA72A773-4EC9-25B3-A7A0-A2758DD92D55">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:42:21 UTC</createdTime>
+<generatorID>316D8699-CC46-941D-19EC-4EAD7D1D3953</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>02FBB71D-B422-292A-CCED-10D17EB760B0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id4" id="DE612DAE-33A3-5DE6-6765-10E29DA564C0">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 17:14:08 UTC</createdTime>
+<generatorID>BD23E1E5-68FA-787A-FEFC-61B4099489D1</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>53AC3219-65B2-9B19-F78C-488A421499F9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89035EBC-C1CF-6B30-4783-4DB29D6B45A1" name="Product_set PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:06:11 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6175A217-820A-2F06-B75C-825E1CB95624</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

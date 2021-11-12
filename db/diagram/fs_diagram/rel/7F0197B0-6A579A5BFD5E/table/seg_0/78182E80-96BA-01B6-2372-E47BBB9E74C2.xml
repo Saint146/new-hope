@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="78182E80-96BA-01B6-2372-E47BBB9E74C2" name="Scheduler">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Расписание необходимости забора продуктов]]></commentInRDBMS>
+<generatorID>7003925A-DDC1-500B-29F6-214305469CC6</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A27D1EA2-01DF-8354-1606-CF367E199BD3">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>6F32CA18-F248-1AF6-F516-F517CFBAB5A2</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Product_set_id" id="5FCB449A-76F3-4599-761B-C81425AC5546">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>FF6448D3-1D49-FAF2-73AB-484FB67FF339</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3714D9F1-6F71-7F96-4474-6EA2362DFDEC" referredColumn="83C8A19C-4E0E-3041-CC4A-364ACCBC17F6"/>
+</associations>
+</Column>
+<Column name="date_produce" id="D33D12FD-D14F-FDA1-82B7-20AB988F575D">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата предоставления продуктов производителем]]></commentInRDBMS>
+<generatorID>85EF57F0-D5E2-646D-6F7B-DB6E3DD52663</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Schedule_status_id" id="9ECB8D55-3CD5-30A5-B9EB-AE098221409C">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>6BE31915-A905-E15E-B6FB-C0360EA43691</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="290DD5D1-3DF0-7422-B6AA-E0E44C66B04D" referredColumn="F6759489-76EC-5C3B-3479-0632D439C3A2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="51AD7EFD-20C8-0F3D-1967-477015A9FB83" name="Scheduler_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>7B4D11E0-43F9-E30E-FC7A-4EDA637961AE</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A27D1EA2-01DF-8354-1606-CF367E199BD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48D45D85-9865-1FA6-2512-BE9A049C5BF6" name="Scheduler_Schedule_status_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>34CB3373-6924-75A0-CAF8-F3EACD11F128</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9ECB8D55-3CD5-30A5-B9EB-AE098221409C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="07682DF0-A198-61FF-AA79-0BF28F761CBF" name="Scheduler_Product_set_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>F6682F2D-7593-4D5A-4B0A-C4D2CCDA6E4C</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FCB449A-76F3-4599-761B-C81425AC5546"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

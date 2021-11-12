@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Act_recv_receiver_id" directorySegmentName="seg_0" id="0BF6E773-8969-BB8B-61A8-46E9AEEFB01C">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 17:17:22 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<sourcePk>2A5F95EF-D1E4-39DA-B167-392D189D03CB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6D711B3C-9741-2BFC-C68F-9C5E2BDF7F42</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>695AAB47-EB35-750C-48CF-C63E02C9762D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

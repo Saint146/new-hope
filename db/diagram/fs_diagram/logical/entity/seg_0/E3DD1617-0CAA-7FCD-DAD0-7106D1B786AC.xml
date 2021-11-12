@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E3DD1617-0CAA-7FCD-DAD0-7106D1B786AC" name="Product_set_volunteer">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:38:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Связь продуктового набора с волонтёрами]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="AD11419E-FB89-68C3-EBF3-3518D364EF37">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:45:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="C25FA79A-B085-3872-96B2-F3D5138BCD27">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:46:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[ИД Продуктового набора]]></commentInRDBMS>
+<generatorID>D85BDA72-2F93-F777-42B7-60DCD5B1F2E3</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>6175A217-820A-2F06-B75C-825E1CB95624</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="EFFBCD4F-5457-DFED-AB4E-5DBDE17CFC80">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:08:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID Волонтёра]]></commentInRDBMS>
+<generatorID>B95FA252-8BE7-8E22-D700-9F957134AC5F</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>AE2C7941-637D-5097-B2E9-F476E5DE61D4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DF9A6697-36D3-8ECE-B4DA-D2569A04AD90" name="product_set_vounteer PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:40:06 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AD11419E-FB89-68C3-EBF3-3518D364EF37</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

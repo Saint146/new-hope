@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CCCFDECB-159F-C29A-993E-4C40A4F4244B" name="City">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 14:52:15 UTC</createdTime>
+<comment><![CDATA[Город]]></comment>
+<commentInRDBMS><![CDATA[Город]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="66FE4CF3-797E-A841-E9AF-E6441EE7020F">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 14:52:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="34A79473-9913-FFA6-F8F0-D0434354ED1F">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 14:52:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Название]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A30396EE-988F-064D-D9B8-9A82CF716C16" name="City PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 14:52:34 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>66FE4CF3-797E-A841-E9AF-E6441EE7020F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

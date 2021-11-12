@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9302EBFA-6722-C91E-1089-1DFA36F32E48" name="City">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<comment><![CDATA[Город]]></comment>
+<commentInRDBMS><![CDATA[Город]]></commentInRDBMS>
+<generatorID>CCCFDECB-159F-C29A-993E-4C40A4F4244B</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C1336E51-C6FE-79E5-0F5D-7AC36716093D">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>66FE4CF3-797E-A841-E9AF-E6441EE7020F</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="26A52D8B-2D9B-8D68-2664-1599DBACC079">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Название]]></commentInRDBMS>
+<generatorID>34A79473-9913-FFA6-F8F0-D0434354ED1F</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B5B66AB2-B286-A239-E852-3C8EA4E01AF0" name="City_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>A30396EE-988F-064D-D9B8-9A82CF716C16</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1336E51-C6FE-79E5-0F5D-7AC36716093D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

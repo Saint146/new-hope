@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Product_set_volunt_volunt_id" directorySegmentName="seg_0" id="B95FA252-8BE7-8E22-D700-9F957134AC5F">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:08:54 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<sourcePk>57A630B4-59E4-0F6E-822C-EBF5DAFB66F6</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CABD188C-630D-4E35-FE8A-6FEC835F3773</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E3DD1617-0CAA-7FCD-DAD0-7106D1B786AC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7003925A-DDC1-500B-29F6-214305469CC6" name="Scheduler">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:24:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[Расписание необходимости забора продуктов]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="6F32CA18-F248-1AF6-F516-F517CFBAB5A2">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:24:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="FF6448D3-1D49-FAF2-73AB-484FB67FF339">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:29:46 UTC</createdTime>
+<generatorID>F6682F2D-7593-4D5A-4B0A-C4D2CCDA6E4C</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>6175A217-820A-2F06-B75C-825E1CB95624</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_produce" id="85EF57F0-D5E2-646D-6F7B-DB6E3DD52663">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:31:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата предоставления продуктов производителем]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="6BE31915-A905-E15E-B6FB-C0360EA43691">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:34:16 UTC</createdTime>
+<generatorID>34CB3373-6924-75A0-CAF8-F3EACD11F128</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>2CFF6B5D-6F45-BF03-9B7B-F1BC41DE8C14</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7B4D11E0-43F9-E30E-FC7A-4EDA637961AE" name="Scheduler PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:24:56 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6F32CA18-F248-1AF6-F516-F517CFBAB5A2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

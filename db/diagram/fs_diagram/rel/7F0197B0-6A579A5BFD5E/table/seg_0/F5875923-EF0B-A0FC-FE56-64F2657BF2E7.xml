@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F5875923-EF0B-A0FC-FE56-64F2657BF2E7" name="Act_receiver">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Акт при передаче получателю]]></commentInRDBMS>
+<generatorID>695AAB47-EB35-750C-48CF-C63E02C9762D</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="D7A7D2D3-65FA-0638-77DF-0E5BEF3C9AFA">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>53AC3219-65B2-9B19-F78C-488A421499F9</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_create" id="50C43C89-DCD6-2F3F-D43F-75140B23C955">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата создания]]></commentInRDBMS>
+<generatorID>873C895A-B7A3-56F5-6320-C81A45327A84</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Receiver_id" id="A83E9198-0001-17D8-FAF2-4B8C88F36972">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID получателя]]></commentInRDBMS>
+<generatorID>0786EE72-2EFE-5577-95AC-2CE24C1C1CA3</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="858B9953-43D7-9C24-0641-165676888820" referredColumn="B5C0FD9F-1808-371B-E11F-92AF02A3D3F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CE44A92C-108B-1584-6BA8-863709AD818E" name="Act_receiver_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>C56D7AFE-09AC-C687-5804-AA0F266D910D</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7A7D2D3-65FA-0638-77DF-0E5BEF3C9AFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FEDDCA26-2EF7-1D21-753A-2408606553EE" name="Act_receiver_Receiver_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>0BF6E773-8969-BB8B-61A8-46E9AEEFB01C</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A83E9198-0001-17D8-FAF2-4B8C88F36972"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

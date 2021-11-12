@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Scheduler_prod_set_id" directorySegmentName="seg_0" id="F6682F2D-7593-4D5A-4B0A-C4D2CCDA6E4C">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 07:29:46 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<sourcePk>89035EBC-C1CF-6B30-4783-4DB29D6B45A1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AA6C5EEF-A21F-C7C8-5F0B-ADAF29B29D38</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7003925A-DDC1-500B-29F6-214305469CC6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

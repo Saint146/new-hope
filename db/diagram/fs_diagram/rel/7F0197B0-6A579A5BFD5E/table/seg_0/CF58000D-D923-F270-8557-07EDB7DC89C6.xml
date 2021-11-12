@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF58000D-D923-F270-8557-07EDB7DC89C6" name="Receiver">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Получатель]]></commentInRDBMS>
+<generatorID>6D711B3C-9741-2BFC-C68F-9C5E2BDF7F42</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B5C0FD9F-1808-371B-E11F-92AF02A3D3F2">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>E4822096-D957-ACFF-15A6-09B259EE6ACD</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="C0158C22-A36C-34F2-79AE-136AF32B9811">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Название, имя]]></commentInRDBMS>
+<generatorID>2CC76591-5051-AB90-3DB8-A459897BBFFA</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="CC6AC596-8458-1336-B5CE-B34F5D677BEC">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Адрес]]></commentInRDBMS>
+<generatorID>56D72A17-DF13-10DA-278C-4D5CAD482EC2</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City_id" id="F3A3475E-9478-1EDB-CAB3-515101D87B8A">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>F2061125-A2D3-6E8E-2046-A4DE71D465F9</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C21AB3C0-44E9-4580-6461-1982F322AFC8" referredColumn="C1336E51-C6FE-79E5-0F5D-7AC36716093D"/>
+</associations>
+</Column>
+<Column name="Receiver_type_id" id="BB7D23DA-D3C9-0BEF-344E-0FA7B8D34088">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>D85230B7-C866-0780-135E-8CF265CBDF36</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="39AB9D08-C79C-A0E0-FC29-CF010A554621" referredColumn="27429932-F966-1B3A-E5D5-29E4B1CCC871"/>
+</associations>
+</Column>
+<Column name="geo_lonitude" id="64F6FC54-2502-DDCB-EFA4-6C88E2FA0E6A">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>A14B0471-8EA3-45AA-7AF5-B8143312F92E</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>10</dataTypeScale>
+<ownDataTypeParameters>,20,10</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="geo_longitude" id="F3744F99-476B-EC79-1BA0-2054D8709AFF">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>C8CA429D-7367-17AE-E87C-846CFB7041E5</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>10</dataTypeScale>
+<ownDataTypeParameters>,20,10</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1E4C9E48-4FE5-5008-9000-E62A28F33F98" name="Receiver_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>2A5F95EF-D1E4-39DA-B167-392D189D03CB</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5C0FD9F-1808-371B-E11F-92AF02A3D3F2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="924EBD17-E0EF-31F0-EA0F-10C05F93BB11" name="Receiver_City_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>F35DC16B-A7FD-66B9-D8C5-5AF4DF49DDC2</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3A3475E-9478-1EDB-CAB3-515101D87B8A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="577A5324-8EB1-DB9B-D577-9A51845AC2B4" name="Receiver_Receiver_type_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>96F02B29-D830-C32C-D590-CE8B96C79110</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB7D23DA-D3C9-0BEF-344E-0FA7B8D34088"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

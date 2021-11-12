@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CABD188C-630D-4E35-FE8A-6FEC835F3773" name="Volunteer">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:05:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[Волонтёр]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="AE2C7941-637D-5097-B2E9-F476E5DE61D4">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:05:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="DEEC07BB-BEF0-C300-D09A-5088686D6A93">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:05:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[ФИО]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_register" id="687078CE-690B-93F1-6880-CD3898CB899C">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:06:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата регистрации]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="is_curator" id="8958001C-A584-7E6D-5967-BEFD3D116E9B">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:06:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Признак куратора]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="is_admin" id="72CDA727-E0B2-E55D-6E76-0219F9DC155E">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:07:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Признак администратора]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="57A630B4-59E4-0F6E-822C-EBF5DAFB66F6" name="Entity_20 PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:05:32 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE2C7941-637D-5097-B2E9-F476E5DE61D4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

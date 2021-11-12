@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="695AAB47-EB35-750C-48CF-C63E02C9762D" name="Act_receiver">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 16:48:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[Акт при передаче получателю]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="53AC3219-65B2-9B19-F78C-488A421499F9">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 17:13:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_create" id="873C895A-B7A3-56F5-6320-C81A45327A84">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 17:14:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата создания]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="0786EE72-2EFE-5577-95AC-2CE24C1C1CA3">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 17:17:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID получателя]]></commentInRDBMS>
+<generatorID>0BF6E773-8969-BB8B-61A8-46E9AEEFB01C</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>E4822096-D957-ACFF-15A6-09B259EE6ACD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C56D7AFE-09AC-C687-5804-AA0F266D910D" name="Act_receiver PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-06 17:14:06 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>53AC3219-65B2-9B19-F78C-488A421499F9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

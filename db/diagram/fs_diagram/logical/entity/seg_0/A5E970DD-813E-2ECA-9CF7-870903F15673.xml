@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A5E970DD-813E-2ECA-9CF7-870903F15673" name="Product_set_history">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 09:15:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[История набора подуктов]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D60A11B5-2E8D-CCF6-2154-5D7E1AFBAB97">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 09:16:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="6EEC59DE-2D79-2559-C4DF-EB6ECA69E11E">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 09:17:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID Продуктового набора]]></commentInRDBMS>
+<generatorID>4AE25CB4-FF7F-9F15-AA47-243B5A7F7CEE</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>6175A217-820A-2F06-B75C-825E1CB95624</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="A2BE73F1-F7DA-643D-615A-0A90E13D3399">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 09:18:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID Статуса]]></commentInRDBMS>
+<generatorID>59956E74-2293-6FF0-C691-EBB7C4591B17</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<referedAttribute>AA1F17B1-19DB-331A-B9F5-B8AFF05D07C6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_status" id="B1106D1C-B101-40AE-7450-7AB127F39BC1">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 09:18:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата смены статуса]]></commentInRDBMS>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E8AC6DC2-F98D-55BA-2177-A1DBE705FF96" name="Product_set_status PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 09:16:52 UTC</createdTime>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<engineerTo>
+<item key="7F0197B0-40E2-E2C7-B988-6A579A5BFD5E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D60A11B5-2E8D-CCF6-2154-5D7E1AFBAB97</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

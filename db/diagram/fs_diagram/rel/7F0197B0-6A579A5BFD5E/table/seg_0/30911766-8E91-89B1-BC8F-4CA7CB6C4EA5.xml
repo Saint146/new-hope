@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30911766-8E91-89B1-BC8F-4CA7CB6C4EA5" name="Product_set">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<comment><![CDATA[Набор продуктов]]></comment>
+<commentInRDBMS><![CDATA[Набор продуктов]]></commentInRDBMS>
+<generatorID>AA6C5EEF-A21F-C7C8-5F0B-ADAF29B29D38</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="83C8A19C-4E0E-3041-CC4A-364ACCBC17F6">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID]]></commentInRDBMS>
+<generatorID>6175A217-820A-2F06-B75C-825E1CB95624</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_produce" id="F13B0813-6B57-D4AE-7C41-4BE845F710FB">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Дата производства набора]]></commentInRDBMS>
+<generatorID>A2F1CB44-F076-8B96-C1CC-06F76D0C2350</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mass" id="8F790C83-B508-FC4C-1593-5D999691ADC0">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Масса, кг.]]></commentInRDBMS>
+<generatorID>C43DECCB-0F07-FCD9-E2C1-0344C503DDA0</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Producer_id" id="5B3F7CCC-E3D6-5FD7-FBBE-BA5096E1390B">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>6E80C4C3-BA21-50BE-1F5C-963CF2379BF2</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CD4613F2-4DF8-FBE3-77FE-C883D865A932" referredColumn="C9607BD0-725B-8717-ABC5-76ACEB688EB9"/>
+</associations>
+</Column>
+<Column name="Product_item_id" id="7353CD80-B66E-3F6B-187D-9F80E4BA4100">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>F8E6B2C5-AB48-F8DD-F1BB-F98CFE7A8210</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="79153D7D-D581-FF4A-31DB-A067DCDBFEAB" referredColumn="34425533-CA1E-9C9A-0F6A-C932B98AC28D"/>
+</associations>
+</Column>
+<Column name="volunteer_count" id="D151A874-E529-5813-4CCB-B7EFFF256F70">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Сколько волонтёров требуется для распространения набора]]></commentInRDBMS>
+<generatorID>3AE7C7ED-4984-81D6-EF18-EDA383ADFBAB</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Act_produce_id" id="C90368E7-379D-2CCD-07D8-8EE9E30EF2C0">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>AA72A773-4EC9-25B3-A7A0-A2758DD92D55</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0854D0A-022A-4873-F4A6-1D6D7BC5F19D" referredColumn="34DADD46-CBE9-0BE8-2B9B-CA47D802BA35"/>
+</associations>
+</Column>
+<Column name="Act_receiver_id" id="776EC3DE-E267-4101-7B84-FEA42213F87B">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>DE612DAE-33A3-5DE6-6765-10E29DA564C0</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C2F1461E-E118-4021-0B57-D1A5CDB6BE6A" referredColumn="D7A7D2D3-65FA-0638-77DF-0E5BEF3C9AFA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A81F804-4C44-CDA4-9316-2D1C7E0E2332" name="Product_set_PK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>89035EBC-C1CF-6B30-4783-4DB29D6B45A1</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83C8A19C-4E0E-3041-CC4A-364ACCBC17F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6CD4D07A-CDD6-0535-0A90-5498F61F0497" name="Product_set_Product_item_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>63DF04EB-0A62-2F14-DEDF-6732292C84FD</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7353CD80-B66E-3F6B-187D-9F80E4BA4100"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF3BE79F-AF59-5172-652C-44041E5C66F6" name="Product_set_Act_produce_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>316D8699-CC46-941D-19EC-4EAD7D1D3953</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C90368E7-379D-2CCD-07D8-8EE9E30EF2C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5FF5F92-8D84-ED2D-ABCD-00AB2687283F" name="Product_set_Act_receiver_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>BD23E1E5-68FA-787A-FEFC-61B4099489D1</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="776EC3DE-E267-4101-7B84-FEA42213F87B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8A11E434-62C5-06B3-895F-5E7D2F1906A0" name="Product_set_Producer_FK">
+<createdBy>ANMyasnikov</createdBy>
+<createdTime>2021-11-07 10:10:15 UTC</createdTime>
+<generatorID>503632C9-87FE-8AEC-CFFF-A73037CAEBDD</generatorID>
+<ownerDesignName>fs_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B3F7CCC-E3D6-5FD7-FBBE-BA5096E1390B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
