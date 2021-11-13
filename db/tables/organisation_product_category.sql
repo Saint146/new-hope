@@ -12,4 +12,8 @@ create table organisation_product_category
 insert into organisation_product_category (organisation_id, product_category_id) values
 (1, 1);
 
+insert into organisation_product_category (organisation_id, product_category_id) values
+(2, 1),
+(2, 2);
+
 commit;

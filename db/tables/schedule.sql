@@ -17,4 +17,10 @@ values(STR_TO_DATE('11/15/2021', '%m/%d/%Y'), STR_TO_DATE('19:15', '%H:%i'), 1, 
 insert into schedule(schedule_date, schedule_time, organisation_id, volunteer_id)
 values(STR_TO_DATE('11/16/2021', '%m/%d/%Y'), STR_TO_DATE('19:45', '%T'), 1, null);
 
+insert into schedule(schedule_date, schedule_time, organisation_id, volunteer_id)
+values(STR_TO_DATE('11/17/2021', '%m/%d/%Y'), STR_TO_DATE('18:15', '%H:%i'), 1, 1);
+
+insert into schedule(schedule_date, schedule_time, organisation_id, volunteer_id)
+values(STR_TO_DATE('11/18/2021', '%m/%d/%Y'), STR_TO_DATE('14:15', '%H:%i'), 2, 1);
+
 commit;

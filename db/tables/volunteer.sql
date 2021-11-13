@@ -18,18 +18,18 @@ create table if not exists volunteer
 ) comment 'Волонтеры';
 
 insert into volunteer(name, name_gen, phone, city_id, address, password_hash, date_register, is_curator, is_admin, is_locked)
-values('Миша', 'Мише', '123', 2, 'Студенческая 13', 'DJ37DJ28DJ83JD83', sysdate(), 0, 1, 0);
+values('Миша', 'Мише', '895212312312', 2, 'Студенческая 13', 'DJ37DJ28DJ83JD83', sysdate(), 0, 1, 0);
 
 insert into volunteer(name, name_gen, phone, city_id, address, password_hash, date_register, is_curator, is_admin, is_locked)
-values('Алексей', 'Алексею', '3223', 2, 'Студенческая 15', 'DJ37DJ28DJ83JD84', sysdate(), 0, 1, 0);
+values('Алексей', 'Алексею', '895322322322', 2, 'Студенческая 15', 'DJ37DJ28DJ83JD84', sysdate(), 0, 1, 0);
 
 insert into volunteer(name, name_gen, phone, city_id, address, password_hash, date_register, is_curator, is_admin, is_locked)
-values('Александр', 'Александру', '3423', 2, 'Студенческая 53', 'DJ37DJ28DJ83JD85', sysdate(), 0, 1, 0);
+values('Александр', 'Александру', '895342342342', 2, 'Студенческая 53', 'DJ37DJ28DJ83JD85', sysdate(), 0, 1, 0);
 
 insert into volunteer(name, name_gen, phone, city_id, address, password_hash, date_register, is_curator, is_admin, is_locked)
-values('Антон', 'Антону', '43232', 2, 'Ленина 1', 'DJ37DJ28DJ83JD86', sysdate(), 0, 1, 0);
+values('Антон', 'Антону', '895432323232', 2, 'Ленина 1', 'DJ37DJ28DJ83JD86', sysdate(), 0, 1, 0);
 
 insert into volunteer(name, name_gen, phone, city_id, address, password_hash, date_register, is_curator, is_admin, is_locked)
-values('Илья', 'Илье', '454', 2, 'Ленина 1', 'DJ37DJ28DJ83JD86', sysdate(), 0, 1, 0);
+values('Илья', 'Илье', '89545454545', 2, 'Ленина 1', 'DJ37DJ28DJ83JD86', sysdate(), 0, 1, 0);
 
 commit;

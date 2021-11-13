@@ -14,4 +14,7 @@ create table if not exists organisation
 insert into organisation(name, phone, city_id, address, date_register)
 values('Отдадим хлеб', '890912312312', 2, 'Студенческая 1', sysdate());
 
+insert into organisation(name, phone, city_id, address, date_register)
+values('Отдадим хлеб И фрукты', '890912312312', 2, 'Студенческая 2', sysdate());
+
 commit;
