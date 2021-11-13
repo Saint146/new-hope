@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name="/organization")
+@Table(name="v_organization")
 public class OrganizationEntity {
     @Id
     private Integer id;
@@ -19,5 +19,11 @@ public class OrganizationEntity {
     private String cityName;
     private String address;
     private Date dateRegister;
-    //private Date dateRegister;
+    private String agreementId;
+    private String agreementNum;
+    private Date signDate;
+    private String accordance;
+    private String representor;
+    private String representorGen;
+    private Integer isCurrent;
 }
