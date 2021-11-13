@@ -17,8 +17,8 @@ public class CityController {
     CityRepository cityRepository;
 
     @GetMapping(value = "/city")
-    public @ResponseBody
-    List<CityEntity> getCityList() {
+    @ResponseBody
+    public List<CityEntity> getCityList() {
 
         List<CityEntity> cityList = cityRepository.findAll();
         return cityList;

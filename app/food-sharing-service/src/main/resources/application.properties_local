@@ -1,0 +1,6 @@
+datasource.driverClassName=org.postgresql.Driver
+datasource.jdbcUrl=jdbc:postgresql://localhost:5432/ern
+datasource.username=postgres
+datasource.password=a206
+datasource.schema=fs
+datasource.maximumPoolSize=10
