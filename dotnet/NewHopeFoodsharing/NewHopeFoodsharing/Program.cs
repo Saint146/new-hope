@@ -8,7 +8,7 @@ namespace NewHopeFoodsharing
 	{
 		static void Main(string[] args)
 		{
-			ActType actType = ActType.Transfer;
+			ActType actType = ActType.Accept;
 
 			const string filename = @"C:\Users\saint\Desktop\ActTransfer.pdf";
 

@@ -17,7 +17,7 @@ namespace NewHopeFoodsharing.ActExport
 			document.AddTitle(title);
 
 			document.Add(Par($"Приложение № {S("ANNEX_NUMBER")}\nк Договору пожертвования\nпродовольственных товаров\n" +
-$"от {S("AGREEMENT_DATE")} № {S("AGREEMENT_NUMBER")}", Element.ALIGN_RIGHT));
+			$"от {S("AGREEMENT_DATE")} № {S("AGREEMENT_NUMBER")}", Element.ALIGN_RIGHT));
 
 			document.Add(Par(title, Element.ALIGN_CENTER));
 
@@ -97,8 +97,8 @@ $"от {S("AGREEMENT_DATE")} № {S("AGREEMENT_NUMBER")}", Element.ALIGN_RIGHT))
 			table = new PdfPTable(2);
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
+			table.AddCell(C($"/ {S("ORG_REPRESENTER")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			table.AddCell(C($"/ {S("FS_VOLUNTEER")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
-			table.AddCell(C($"/ {S("TRANSFEREE")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			document.Add(table);
 		}
 	}
