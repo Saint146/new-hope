@@ -36,6 +36,9 @@
     <Reference Include="iTextSharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
       <HintPath>..\packages\iTextSharp-LGPL.4.1.6\lib\iTextSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,7 +54,10 @@
     <Compile Include="ActExport\TransferActExporter.cs" />
     <Compile Include="ActExport\AcceptActExporter.cs" />
     <Compile Include="ActExport\ActExporter.cs" />
-    <Compile Include="TableRowInfo.cs" />
+    <Compile Include="DataSource\DataSourceJson.cs" />
+    <Compile Include="DataSource\DataSourceMock.cs" />
+    <Compile Include="DataSource\IDataSource.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

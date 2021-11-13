@@ -21,7 +21,7 @@ namespace NewHopeFoodsharing.ActExport
 		}
 
 		public Dictionary<string, string> StringData = new Dictionary<string, string>();
-		public List<TableRowInfo> TableData = new List<TableRowInfo>();
+		public List<Dictionary<string, string>> TableData = new List<Dictionary<string, string>>();
 
 		protected Font font;
 

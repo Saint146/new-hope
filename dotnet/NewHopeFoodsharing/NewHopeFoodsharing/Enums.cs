@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace NewHopeFoodsharing
 {
-	public class TableRowInfo : Dictionary<string, string>
+	public enum ActType
 	{
+		Accept,
+		Transfer
 	}
 }
