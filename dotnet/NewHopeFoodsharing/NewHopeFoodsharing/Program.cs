@@ -1,12 +1,9 @@
-﻿using System;
+﻿using NewHopeFoodsharing.ActExport;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using PdfSharp;
-using PdfSharp.Drawing;
-using PdfSharp.Pdf;
-using PdfSharp.Pdf.IO;
-using NewHopeFoodsharing.ActExport;
-using System.Collections.Generic;
+using NewHopeFoodsharing.DataSource;
 
 namespace NewHopeFoodsharing
 {
@@ -14,85 +11,75 @@ namespace NewHopeFoodsharing
 	{
 		static void Main(string[] args)
 		{
-			const string filename = @"C:\Users\saint\Desktop\ActTransfer.pdf";
+			string fileName = string.Empty;
 
-			ActExporter exporter = new ActExporter();
-
-			ActType actType = ActType.Accept;
-
-			if (actType == ActType.Accept)
+			try
 			{
-				exporter.ActTemplateResourceName = "NewHopeFoodsharing.ActAcceptTemplate.html";
-				exporter.StringData = new Dictionary<string, string>()
-				{
-					["DOC_TITLE"] = "Акт приема-передачи продовольственных товаров",
-					["ANNEX_NUMBER"] = "1",
-					["AGREEMENT_DATE"] = "29.02.2020",
-					["AGREEMENT_NUMBER"] = "146",
-					["LOCALITY"] = "г. Москва",
-					["ACT_DATE"] = "13.11.2021",
-					["ORG_NAME"] = "ООО «Шестёрочка»",
-					["ORG_REPRESENTER"] = "Пупкин Иван Иванович",
-					["ORG_REPRESENTER_GENITIVE"] = "Пупкина Ивана Ивановича",
-					["ORG_ACCORDANCE"] = "ч. 1 ст. 182 ГК РФ (полномочия, вытекающие из окружающей обстановки)",
-					["FS_NAME"] = "Автономная некоммерческая организация «Национальный центр спасения еды и заботы об экологии «Фудшеринг» (Распределение продуктов)»",
-					["FS_REPRESENTER_GENITIVE"] = "Иванова Петра Сидоровича",
-					["FS_REPRESENTER_ACCORDANCE"] = "Устава",
-					["FS_VOLUNTEER"] = "Петрова Владислава Васильевна",
-				};
+#if DEBUG
+				args = new string[] { "-accept", @"C:\Users\saint\Desktop\test.json" };
+#endif
 
-				var productsTableData = new List<TableRowInfo>()
-				{
-					new TableRowInfo()
-					{
-						["NAME"]="Хлеб дарницкий",
-						["AMOUNT"]="10",
-						["PRICE"]="65,50",
-						["DUE_DATE"]="16.11.2021",
-						["NOTE"]=" ",
-					},
-					new TableRowInfo()
-					{
-						["NAME"]="Батон нарезной",
-						["AMOUNT"]="25",
-						["PRICE"]="34,00",
-						["DUE_DATE"]="17.11.2021",
-						["NOTE"]=" ",
-					},
-				};
+				if (args.Length < 1)
+					throw new Exception("Не указан первый аргумент — тип акта");
 
-				exporter.TableData.Add("PRODUCTS_TABLE", productsTableData);
+				if (args.Length < 2)
+					throw new Exception("Не указан второй аргумент — путь к файлу с данными");
+
+				ActType actType;
+				var actTypeStr = args[0];
+				if (actTypeStr == "-accept")
+					actType = ActType.Accept;
+				else if (actTypeStr == "-transfer")
+					actType = ActType.Transfer;
+				else
+					throw new Exception("Неверный тип акта. Возможные значения: -accept, -transfer");
+
+				fileName = args[1];
+
+#if DEBUG
+				fileName = @"C:\Users\saint\Desktop\Act.pdf";
+#endif
+				IDataSource source;
+
+#if DEBUG
+				source = new DataSourceMock(actType);
+#else
+				source = new DataSourceJson(dataJson);
+#endif
+
+				ActExporter exporter;
+
+				if (actType == ActType.Accept)
+				{
+					exporter = new AcceptActExporter()
+					{
+						StringData = source.StringData,
+						TableData = source.TableData
+					};
+				}
+				else if (actType == ActType.Transfer)
+				{
+					exporter = new TransferActExporter()
+					{
+						StringData = source.StringData
+					};
+				}
+				else
+					return;
+
+				exporter.Export(fileName);
+#if DEBUG
+				Process.Start(fileName);
+#endif
 			}
-			else if (actType == ActType.Transfer)
+			catch (Exception ex)
 			{
-				exporter.ActTemplateResourceName = "NewHopeFoodsharing.ActTransferTemplate.html";
-				exporter.StringData = new Dictionary<string, string>()
-				{
-					["DOC_TITLE"] = "Акт приема-передачи Пожертвования",
-					["LOCALITY"] = "г. Москва",
-					["ACT_DATE"] = "13.11.2021",
-					["FS_NAME"] = "Автономная некоммерческая организация «Национальный центр спасения еды и заботы об экологии «Фудшеринг» (Распределение продуктов)»",
-					["FS_SHORT_NAME"] = "АНО «Фудшеринг»",
-					["FS_VOLUNTEER"] = "Петрова Владислава Васильевна",
-					["FS_VOLUNTEER_GENITIVE"] = "Петровой Владиславы Васильевны",
-					["FS_VOLUNTEER_ACCORDANCE"] = "доверенности",
-					["PRODUCTS_SUM_AMOUNT"] = "100500",
-					["TRANSFEREE"] = "Кукушкина Олеся Петровна",
-					["TRANSFEREE_PHONE"] = "+794512365291",
-					["TRANSFEREE_ACCORDANCE"] = "потому что"
-				};
+				Environment.ExitCode = 1;
+				Console.WriteLine(ex.ToString());
+
+				if (File.Exists(fileName))
+					File.WriteAllText(fileName, ex.ToString());
 			}
-			else
-				return;
-
-			exporter.Export(filename);
-			Process.Start(filename);
-		}
-
-		enum ActType
-		{
-			Accept,
-			Transfer
 		}
 	}
 }

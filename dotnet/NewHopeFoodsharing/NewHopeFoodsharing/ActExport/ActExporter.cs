@@ -1,95 +1,86 @@
-﻿using PdfSharp;
-using PdfSharp.Pdf;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Text;
-using TheArtOfDev.HtmlRenderer.PdfSharp;
 
 namespace NewHopeFoodsharing.ActExport
 {
-	public class ActExporter
+	public abstract class ActExporter
 	{
-		public ActExporter() { }
+		public ActExporter()
+		{
+			// инициализируем шрифт именно так, потому что по-другому кодировку переключить просто нельзя
+			// https://stackoverflow.com/questions/1727765/itextsharp-international-text/1729278
 
-		public string ActTemplateResourceName { set { actHtmlTemplate = ReadFromEmbeddedResource(value); } }
+			string timesTtf = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "times.ttf");
+			var baseFont = BaseFont.CreateFont(timesTtf, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+
+			font = new Font(baseFont, 12, Font.NORMAL, Color.BLACK);
+		}
+
 		public Dictionary<string, string> StringData = new Dictionary<string, string>();
-		public Dictionary<string, List<TableRowInfo>> TableData = new Dictionary<string, List<TableRowInfo>>();
+		public List<Dictionary<string, string>> TableData = new List<Dictionary<string, string>>();
 
-		string actHtmlTemplate;
+		protected Font font;
 
 		public string Export(string fileName)
 		{
-			var html = FillActTemplate();
-			PdfDocument pdf = PdfGenerator.GeneratePdf(html, PageSize.A4);
-			pdf.Save(fileName);
+			FileStream fileStream = new FileStream(fileName, FileMode.Create);
+			try
+			{
+				Document document = new Document(PageSize.A4, 60, 40, 40, 40);
+				PdfWriter pdfWriter = PdfWriter.GetInstance(document, fileStream);
+
+				document.Open();
+
+				FillDocument(document);
+
+				document.Close();
+				pdfWriter.Close();
+			}
+			finally
+			{
+				fileStream.Close();
+			}
 
 			return fileName;
 		}
 
-		string FillActTemplate()
+		protected virtual void FillDocument(Document document)
+		{ }
+
+		protected string S(string stringId)
 		{
-			string act = FillTemplate(actHtmlTemplate, StringData);
-
-			foreach (var tableEntry in TableData)
-			{
-				var rowsStringData = tableEntry.Value;
-
-				// загружаем шаблон одной строки
-				string rowTemplate = ReadFromEmbeddedResource("NewHopeFoodsharing.ActExport.TableRowTemplate.html");
-				StringBuilder rb = new StringBuilder();
-
-				// добавляем заголовок
-				rb.AppendLine(FillTemplate(rowTemplate, new Dictionary<string, string>()
-				{
-					["NUMBER"] = "№ п/п",
-					["NAME"] = "Наименование продовольственного товара",
-					["AMOUNT"] = "Количество / вес",
-					["PRICE"] = "Стоимость (руб./шт.)",
-					["DUE_DATE"] = "Срок годности",
-					["NOTE"] = "Примечание",
-				}));
-
-				// заполняем строки данными
-				for (int i = 0; i < rowsStringData.Count; i++)
-				{
-					// добавляем номер пункта
-					rowsStringData[i].Add("NUMBER", (i + 1).ToString());
-
-					rb.Append(FillTemplate(rowTemplate, rowsStringData[i]));
-				}
-
-				// загружаем шаблон таблицы
-				StringBuilder tb = new StringBuilder(ReadFromEmbeddedResource("NewHopeFoodsharing.ActExport.TableTemplate.html"));
-
-				// подставляем получившиеся строки в шаблон таблицы
-				tb.Replace("[[ROWS]]", rb.ToString());
-
-				// вставляем таблицу в нужное место документа
-				act = act.Replace("[[" + tableEntry.Key + "]]", tb.ToString());
-			}
-
-			return act;
+			return StringData[stringId];
 		}
 
-		static string FillTemplate(string template, Dictionary<string, string> entries)
+		protected Phrase P(string text = "")
 		{
-			var sb = new StringBuilder(template);
-
-			foreach (var stringEntry in entries)
-			{
-				sb.Replace($"[[{stringEntry.Key}]]", stringEntry.Value);
-			}
-
-			return sb.ToString();
+			return new Phrase(text, font);
 		}
 
-		static string ReadFromEmbeddedResource(string resourceFileName)
+		protected Paragraph Par(string text = "", int align = Element.ALIGN_LEFT)
 		{
-			using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceFileName))
+			return new Paragraph(P(text))
 			{
-				return new StreamReader(stream).ReadToEnd();
-			}
+				Alignment = align,
+				FirstLineIndent = 40,
+				SpacingAfter = 10,
+				MultipliedLeading = 1.3f
+			};
+		}
+
+		protected PdfPCell C(string text = "", int align = Element.ALIGN_LEFT, int border = Rectangle.TOP_BORDER | Rectangle.BOTTOM_BORDER | Rectangle.LEFT_BORDER | Rectangle.RIGHT_BORDER)
+		{
+			return new PdfPCell(P(text))
+			{
+				Padding = 7,
+				HorizontalAlignment = align,
+				VerticalAlignment = Element.ALIGN_MIDDLE,
+				Border = border
+			};
 		}
 	}
 }
