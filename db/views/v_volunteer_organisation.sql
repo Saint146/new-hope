@@ -1,11 +1,11 @@
-create or replace view v_volunteer_organisation as
+create or replace view v_volunteer_organization as
 select distinct
        v.id as volunteer_id,
        v.city_id,
        o.id,
-       o.name as organisation_name
+       o.name as organization_name
 from volunteer v
   join schedule s
     on s.volunteer_id = v.id
-  join organisation o
-    on o.id = s.organisation_id;
+  join organization o
+    on o.id = s.organization_id;
