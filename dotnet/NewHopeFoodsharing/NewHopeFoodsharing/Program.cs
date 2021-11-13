@@ -1,12 +1,6 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using PdfSharp;
-using PdfSharp.Drawing;
-using PdfSharp.Pdf;
-using PdfSharp.Pdf.IO;
-using NewHopeFoodsharing.ActExport;
+﻿using NewHopeFoodsharing.ActExport;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace NewHopeFoodsharing
 {
@@ -14,15 +8,15 @@ namespace NewHopeFoodsharing
 	{
 		static void Main(string[] args)
 		{
+			ActType actType = ActType.Transfer;
+
 			const string filename = @"C:\Users\saint\Desktop\ActTransfer.pdf";
 
-			ActExporter exporter = new ActExporter();
-
-			ActType actType = ActType.Accept;
+			ActExporter exporter;
 
 			if (actType == ActType.Accept)
 			{
-				exporter.ActTemplateResourceName = "NewHopeFoodsharing.ActAcceptTemplate.html";
+				exporter = new AcceptActExporter();
 				exporter.StringData = new Dictionary<string, string>()
 				{
 					["DOC_TITLE"] = "Акт приема-передачи продовольственных товаров",
@@ -41,7 +35,7 @@ namespace NewHopeFoodsharing
 					["FS_VOLUNTEER"] = "Петрова Владислава Васильевна",
 				};
 
-				var productsTableData = new List<TableRowInfo>()
+				exporter.TableData = new List<TableRowInfo>()
 				{
 					new TableRowInfo()
 					{
@@ -61,11 +55,19 @@ namespace NewHopeFoodsharing
 					},
 				};
 
-				exporter.TableData.Add("PRODUCTS_TABLE", productsTableData);
+				//for (int i = 1; i < 40; i++)
+				//	exporter.TableData.Add(new TableRowInfo()
+				//	{
+				//		["NAME"] = "Хлеб дарницкий",
+				//		["AMOUNT"] = "10",
+				//		["PRICE"] = "65,50",
+				//		["DUE_DATE"] = "16.11.2021",
+				//		["NOTE"] = " ",
+				//	});
 			}
 			else if (actType == ActType.Transfer)
 			{
-				exporter.ActTemplateResourceName = "NewHopeFoodsharing.ActTransferTemplate.html";
+				exporter = new TransferActExporter();
 				exporter.StringData = new Dictionary<string, string>()
 				{
 					["DOC_TITLE"] = "Акт приема-передачи Пожертвования",
@@ -73,8 +75,8 @@ namespace NewHopeFoodsharing
 					["ACT_DATE"] = "13.11.2021",
 					["FS_NAME"] = "Автономная некоммерческая организация «Национальный центр спасения еды и заботы об экологии «Фудшеринг» (Распределение продуктов)»",
 					["FS_SHORT_NAME"] = "АНО «Фудшеринг»",
-					["FS_VOLUNTEER"] = "Петрова Владислава Васильевна",
-					["FS_VOLUNTEER_GENITIVE"] = "Петровой Владиславы Васильевны",
+					["FS_VOLUNTEER"] = "Петров Владислав Васильевич",
+					["FS_VOLUNTEER_GENITIVE"] = "Петрова Владислава Васильевича",
 					["FS_VOLUNTEER_ACCORDANCE"] = "доверенности",
 					["PRODUCTS_SUM_AMOUNT"] = "100500",
 					["TRANSFEREE"] = "Кукушкина Олеся Петровна",
