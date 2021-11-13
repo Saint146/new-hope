@@ -24,15 +24,6 @@ public class AuthController {
     @Autowired
     VolunteerRepository volunteerRepository;
 
-
-//    @GetMapping(value = "/auth")
-//    @ResponseBody
-//    public List<AuthEntity> getAuthList() {
-//
-//        List<AuthEntity> authList = authRepository.findAll();
-//        return authList;
-//    }
-
     @PostMapping(path="/auth", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity setVolunteer(@RequestBody AuthData newAuthData) {
 

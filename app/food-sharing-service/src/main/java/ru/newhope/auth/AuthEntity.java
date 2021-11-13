@@ -16,6 +16,7 @@ public class AuthEntity {
     private Integer id;
     private String name;
     private String phone;
+    private Integer cityId;
     private String session;
     private String passwordHash;
 }
