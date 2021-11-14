@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.newhope.actitem.ActItemEntity;
 import ru.newhope.actitem.ActItemRepository;
 
 
@@ -40,9 +39,13 @@ public class AcceptActController {
             }
         }
 
-        AcceptActEntity acceptAct = acceptActRepository.save(newAcceptAct);
+        try {
+            AcceptActEntity acceptAct = acceptActRepository.save(newAcceptAct);
+            return new ResponseEntity<>(acceptAct, HttpStatus.CREATED);
+        } catch (Exception ex) {
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+        }
 
-        return new ResponseEntity<>(acceptAct, HttpStatus.CREATED);
     }
 }
 

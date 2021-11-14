@@ -1,5 +1,6 @@
 ru\newhope\auth\AuthData.class
 ru\newhope\config\DataSourceConfiguration.class
+ru\newhope\acceptactshow\AcceptActShowRepository.class
 ru\newhope\transferact\TransferActEntity.class
 ru\newhope\actitem\ActItemEntity.class
 ru\newhope\acceptact\AcceptActEntity.class
@@ -28,14 +29,17 @@ ru\newhope\organization\OrganizationEntity.class
 ru\newhope\productcategory\ProductCategoryEntity.class
 ru\newhope\organization\OrganizationController.class
 ru\newhope\core\service\AbstractService.class
+ru\newhope\acceptactitemshow\ActItemShowRepository.class
 ru\newhope\volonteerorganization\VolunteerOrganizationController.class
 ru\newhope\acceptact\AcceptActController.class
+ru\newhope\acceptactshow\AcceptActShowEntity.class
 ru\newhope\core\service\AbstractServiceImpl.class
 ru\newhope\volunteer\VolunteerRepository.class
 ru\newhope\config\SwaggerConfig.class
 ru\newhope\schedule\ScheduleController.class
 ru\newhope\auth\AuthController.class
 ru\newhope\volonteerorganization\VolunteerOrganizationRepository.class
+ru\newhope\acceptactitemshow\ActItemShowEntity.class
 ru\newhope\auth\AuthRepository.class
 ru\newhope\schedule\ScheduleRepository.class
 ru\newhope\volunteer\VolunteerEntity.class

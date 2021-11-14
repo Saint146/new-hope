@@ -8,6 +8,7 @@ D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\servi
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\schedule\ScheduleController.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\Mapper.java
+D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptactitemshow\ActItemShowRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volonteerorganization\VolunteerOrganizationRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptact\AcceptActEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\productcategory\ProductCategoryRepository.java
@@ -15,6 +16,8 @@ D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityC
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\organization\OrganizationRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\productcategory\ProductCategoryEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\auth\AuthRepository.java
+D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptactshow\AcceptActShowEntity.java
+D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptactshow\AcceptActShowRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\config\DataSourceConfiguration.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volunteer\VolunteerEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\config\SwaggerConfig.java
@@ -32,6 +35,7 @@ D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptact\
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\actitem\ActItemEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\auth\AuthData.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\transferact\TransferActController.java
+D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptactitemshow\ActItemShowEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volonteerorganization\VolunteerRequestParams.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volonteerorganization\VolunteerOrganizationController.java

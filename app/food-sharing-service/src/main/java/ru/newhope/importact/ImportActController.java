@@ -1,123 +1,93 @@
 package ru.newhope.importact;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.newhope.acceptactshow.AcceptActShowEntity;
+import ru.newhope.acceptactshow.AcceptActShowRepository;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
 @Api(value = "Импорт акта")
 public class ImportActController {
-    @GetMapping(value = "/accept_act_import/{accept_act_id}")
-    @ResponseBody
-    public String importAcceptAct(@PathVariable("accept_act_id") Integer id) {
+    @Autowired
+    AcceptActShowRepository acceptActShowRepository;
 
-        deleteAllFilesFolder("C:/Users/Administrator/Desktop/fs_buf");
+    @GetMapping(value = "/accept_act_import/{accept_act_id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity importAcceptAct(@PathVariable("accept_act_id") Integer id) {
+
+        Optional<AcceptActShowEntity> actOpt =  acceptActShowRepository.findById(id);
+        AcceptActShowEntity act = actOpt.get();
+
+        deleteAllFilesFolder("C:/Program Files/apache-tomcat-9.0.54/webapps/food-platform/acts");
+        //deleteAllFilesFolder("D:/users/ANMyasnikov/acts");
 
         try {
-            String data = "{\n" +
-                    "\t\"agreementDate\": \"29.02.2020\",\n" +
-                    "\t\"agreementNumber\": \"146\",\n" +
-                    "\t\"locality\": \"г. Москва\",\n" +
-                    "\t\"acceptanceDate\": \"13.11.2021\",\n" +
-                    "\t\"organizationName\": \"ООО «Шестёрочка»\",\n" +
-                    "\t\"organizationRepresenter\": \"Пупкин Иван Иванович\",\n" +
-                    "\t\"organizationRepresenterGen\": \"Пупкина Ивана Ивановича\",\n" +
-                    "\t\"organizationRepresenterAccordance\": \"ч. 1 ст. 182 ГК РФ (полномочия, вытекающие из окружающей обстановки)\",\n" +
-                    "\t\"volunteerName\": \"Петрова Владислава Васильевна\",\n" +
-                    "\t\"actItems\": [\n" +
-                    "\t\t{\n" +
-                    "\t\t\t\"productName\": \"Хлеб дарницкий\",\n" +
-                    "\t\t\t\"amount\": 1.0,\n" +
-                    "\t\t\t\"price\": 19.9,\n" +
-                    "\t\t\t\"expirationDate\": \"2021-11-14T19:00:00.000+00:00\",\n" +
-                    "\t\t\t\"note\": \"Примечание к позиции 1\"\n" +
-                    "\t\t},\n" +
-                    "\t\t{\n" +
-                    "\t\t\t\"productName\": \"Батон нарезной\",\n" +
-                    "\t\t\t\"amount\": 5.0,\n" +
-                    "\t\t\t\"price\": 40.9,\n" +
-                    "\t\t\t\"expirationDate\": \"2021-11-15T19:00:00.000+00:00\",\n" +
-                    "\t\t\t\"note\": \"Вот!\"\n" +
-                    "\t\t},\n" +
-                    "\t\t{\n" +
-                    "\t\t\t\"productName\": \"Булочка\",\n" +
-                    "\t\t\t\"amount\": 1.0,\n" +
-                    "\t\t\t\"price\": 250.9,\n" +
-                    "\t\t\t\"expirationDate\": \"2021-11-18T19:00:00.000+00:00\",\n" +
-                    "\t\t\t\"note\": \"\"\n" +
-                    "\t\t}\n" +
-                    "\t]\n" +
-                    "}";
-            toFile(data);
+            ObjectMapper objectMapper = new ObjectMapper();
+            String actAsString = objectMapper.writeValueAsString(act);
+            String newFileName = toFile(actAsString);
+
 
             final List<String> commands = new ArrayList<String>();
-
-
             commands.add("C:/Users/Administrator/Desktop/fs_app_imp/NewHopeFoodsharing.exe");
             commands.add("-accept");
-            commands.add("C:/Users/Administrator/Desktop/fs_buf/buf.txt");
+            commands.add(newFileName);
+//            commands.add("D:/users/ANMyasnikov/fs_app_imp/NewHopeFoodsharing.exe");
+//            commands.add("-accept");
+//            commands.add(newFileName);
 
             ProcessBuilder pb = new ProcessBuilder(commands);
             Process process = pb.start();
 
-            System.out.println(process.exitValue());
+            //System.out.println(process.exitValue());
 
+            //String newFileNamePdf = newFileName.replace(".json",".pdf");
+            String newFileNamePdf = "acceptAct.pdf";
 
-            File file = new File("C:/Users/Administrator/Desktop/fs_buf/buf.pdf");
-
-            try {
-                if (file.exists() == true) {
-                    moveFile("C:/Users/Administrator/Desktop/fs_buf/buf.pdf", "C:/Users/Administrator/Desktop/buf.pdf");
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-
+            return new ResponseEntity<>("http://vm2888336.33ssd.had.wf:8585/food-platform/acts/" + newFileNamePdf, HttpStatus.CREATED);
         } catch (Exception ex) {
-            System.out.println(ex.getStackTrace());
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_ACCEPTABLE);
         }
-
-        return "Start importing act with id=" + id;
     }
 
-    public static void toFile(String data) throws IOException {
 
-        try(FileWriter writer = new FileWriter("C:/Users/Administrator/Desktop/fs_buf/buf.txt", false))
+    public static String toFile(String data) throws IOException
+    {
+        //String fileName = java.util.UUID.randomUUID().toString().replaceAll("-", "");
+        String fileName = "acceptAct";
+        fileName = "C:/Program Files/apache-tomcat-9.0.54/webapps/food-platform/acts/" + fileName + ".json";
+        //fileName = "D:/users/ANMyasnikov/acts/" + fileName + ".json";
+
+        try
         {
-            writer.write(data);
-            writer.flush();
+            OutputStreamWriter streamWriter = new OutputStreamWriter(new FileOutputStream(fileName), Charset.forName("UTF-8").newEncoder());
+            streamWriter.write(data);
+            streamWriter.close();
         }
-        catch(IOException ex){
+        catch(IOException ex)
+        {
             throw ex;
         }
+
+        return fileName;
     }
 
-    private static void moveFile(String src, String dest ) {
-        Path result = null;
-        try {
-            result =  Files.move(Paths.get(src), Paths.get(dest));
-        } catch (IOException e) {
-            System.out.println("Exception while moving file: " + e.getMessage());
-        }
-        if(result != null) {
-            System.out.println("File moved successfully.");
-        }else{
-            System.out.println("File movement failed.");
-        }
-    }
 
     public static void deleteAllFilesFolder(String path) {
         for (File myFile : new File(path).listFiles())
             if (myFile.isFile()) myFile.delete();
     }
+
+
 }
