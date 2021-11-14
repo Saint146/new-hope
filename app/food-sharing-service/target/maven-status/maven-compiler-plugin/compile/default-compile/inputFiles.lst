@@ -22,9 +22,11 @@ D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volonteero
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volunteer\VolunteerController.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\organization\OrganizationEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\core\Repository.java
+D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\actitem\ActItemRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptact\AcceptActController.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\volunteer\VolunteerRepository.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\acceptact\AcceptActRepository.java
+D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\actitem\ActItemEntity.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\auth\AuthData.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\transferact\TransferActController.java
 D:\FoodSharing\repo\app\food-sharing-service\src\main\java\ru\newhope\city\CityRepository.java
