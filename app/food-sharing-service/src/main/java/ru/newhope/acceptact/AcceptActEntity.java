@@ -15,7 +15,7 @@ public class AcceptActEntity {
     @Id
     private Integer id;
     private Date acceptanceDate;
-    private Integer organisationId;
+    private Integer organizationId;
     private Integer volunteerId;
 
     @OneToMany(cascade = CascadeType.ALL)
