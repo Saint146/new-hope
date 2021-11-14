@@ -1,9 +1,8 @@
 ﻿using NewHopeFoodsharing.ActExport;
+using NewHopeFoodsharing.DataSource;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using NewHopeFoodsharing.DataSource;
 
 namespace NewHopeFoodsharing
 {
@@ -38,7 +37,7 @@ namespace NewHopeFoodsharing
 #if DEBUG
 				source = new DataSourceMock(actType);
 #else
-				source = new DataSourceJson(actType, File.ReadAllText(dataFileName));
+				source = new DataSourceJson(actType, File.ReadAllText(dataFileName, Encoding.UTF8));
 #endif
 
 				// поля, не передаваемые снаружи, но присутствующие в шаблоне
