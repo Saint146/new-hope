@@ -1,16 +1,24 @@
 package ru.newhope.acceptact;
 
 import lombok.Data;
+import ru.newhope.actitem.ActItemEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
+
 
 @Entity
 @Data
-@Table(name="accept_act")
+@Table(name="acceptance_act")
 public class AcceptActEntity {
     @Id
     private Integer id;
-    private String name;
+    private Date acceptanceDate;
+    private Integer organisationId;
+    private Integer volunteerId;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "acceptance_act_id")
+    private List<ActItemEntity> actItems;
 }

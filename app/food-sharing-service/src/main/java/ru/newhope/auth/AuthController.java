@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.newhope.volunteer.VolunteerRepository;
 import org.apache.commons.codec.digest.DigestUtils;
 
-import java.util.List;
+
 import java.util.UUID;
 
 @AllArgsConstructor
