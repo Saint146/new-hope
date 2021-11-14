@@ -20,6 +20,8 @@ public class ImportActController {
     @ResponseBody
     public String importAcceptAct(@PathVariable("accept_act_id") Integer id) {
 
+        deleteAllFilesFolder("C:/Users/Administrator/Desktop/fs_buf");
+
         try {
             String data = "{\n" +
                     "\t\"agreementDate\": \"29.02.2020\",\n" +
@@ -74,7 +76,7 @@ public class ImportActController {
 
             try {
                 if (file.exists() == true) {
-                    moveFile("C:/Users/Administrator/Desktop/fs_buf/buf.pdf", "C:/Users/Desktop.buf.pdf");
+                    moveFile("C:/Users/Administrator/Desktop/fs_buf/buf.pdf", "C:/Users/Administrator/Desktop/buf.pdf");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -112,5 +114,10 @@ public class ImportActController {
         }else{
             System.out.println("File movement failed.");
         }
+    }
+
+    public static void deleteAllFilesFolder(String path) {
+        for (File myFile : new File(path).listFiles())
+            if (myFile.isFile()) myFile.delete();
     }
 }
