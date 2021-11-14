@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: ANMyasnikov
+Build-Jdk: 11.0.11
+Implementation-Title: food-sharing-service
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: ru.newhope
+Main-Class: ${start-class}
+

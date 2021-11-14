@@ -13,8 +13,6 @@ public class ActItemEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer productId;
-    //private String productName;
-    //private String measurementName;
     private Double amount;
     private Double price;
     private Date expirationDate;
