@@ -13,6 +13,7 @@ import java.util.List;
 @Table(name="acceptance_act")
 public class AcceptActEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Date acceptanceDate;
     private Integer organizationId;
