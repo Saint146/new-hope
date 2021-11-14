@@ -1,10 +1,5 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NewHopeFoodsharing.ActExport
 {
@@ -16,24 +11,24 @@ namespace NewHopeFoodsharing.ActExport
 
 			document.AddTitle(title);
 
-			document.Add(Par($"Приложение № {S("ANNEX_NUMBER")}\nк Договору пожертвования\nпродовольственных товаров\n" +
-			$"от {S("AGREEMENT_DATE")} № {S("AGREEMENT_NUMBER")}", Element.ALIGN_RIGHT));
+			document.Add(Par($"Приложение № {S("annexNumber")}\nк Договору пожертвования\nпродовольственных товаров\n" +
+			$"от {S("agreementDate")} № {S("agreementNumber")}", Element.ALIGN_RIGHT));
 
 			document.Add(Par(title, Element.ALIGN_CENTER));
 
 			PdfPTable table = new PdfPTable(2);
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
-			table.AddCell(C(S("LOCALITY"), Element.ALIGN_LEFT, Rectangle.NO_BORDER));
-			table.AddCell(C(S("ACT_DATE"), Element.ALIGN_RIGHT, Rectangle.NO_BORDER));
+			table.AddCell(C(S("locality"), Element.ALIGN_LEFT, Rectangle.NO_BORDER));
+			table.AddCell(C(S("acceptanceDate"), Element.ALIGN_RIGHT, Rectangle.NO_BORDER));
 			document.Add(table);
 
-			document.Add(Par($"{S("ORG_NAME")}, именуемое в дальнейшем «Жертвователь», в лице {S("ORG_REPRESENTER_GENITIVE")}, " +
-			$"действующего на основании {S("ORG_ACCORDANCE")}, с одной стороны, и {S("FS_NAME")}, именуемая в дальнейшем «Одаряемый», " +
-			$"в лице {S("FS_REPRESENTER_GENITIVE")}, действующего на основании {S("FS_REPRESENTER_ACCORDANCE")}, " +
+			document.Add(Par($"{S("organizationName")}, именуемое в дальнейшем «Жертвователь», в лице {S("organizationRepresenterGen")}, " +
+			$"действующего на основании {S("organizationRepresenterAccordance")}, с одной стороны, и {S("fsName")}, именуемая в дальнейшем «Одаряемый», " +
+			$"в лице {S("fsRepresenterGen")}, действующего на основании {S("fsRepresenterAccordance")}, " +
 			$"с другой стороны, совместно именуемые «Стороны», составили настоящий Акт о нижеследующем:"));
 
-			document.Add(Par($"1. Во исполнение Договора пожертвования продовольственных товаров от {S("AGREEMENT_DATE")} № {S("AGREEMENT_NUMBER")} " +
+			document.Add(Par($"1. Во исполнение Договора пожертвования продовольственных товаров от {S("agreementDate")} № {S("agreementNumber")} " +
 			$"(далее — Договор) Жертвователь передал, а Одаряемый принял следующие продовольственные товары: "));
 
 			table = new PdfPTable(6);
@@ -51,11 +46,11 @@ namespace NewHopeFoodsharing.ActExport
 				var rowData = TableData[i];
 
 				table.AddCell(C((i + 1).ToString(), Element.ALIGN_CENTER));
-				table.AddCell(C(rowData["NAME"]));
-				table.AddCell(C(rowData["AMOUNT"], Element.ALIGN_CENTER));
-				table.AddCell(C(rowData["PRICE"], Element.ALIGN_CENTER));
-				table.AddCell(C(rowData["DUE_DATE"], Element.ALIGN_CENTER));
-				table.AddCell(C(rowData["NOTE"]));
+				table.AddCell(C(rowData["productName"]));
+				table.AddCell(C(rowData["amount"], Element.ALIGN_CENTER));
+				table.AddCell(C(rowData["price"], Element.ALIGN_CENTER));
+				table.AddCell(C(rowData["expirationDate"], Element.ALIGN_CENTER));
+				table.AddCell(C(rowData["note"]));
 			}
 			table.HeaderRows = 1;
 			document.Add(table);
@@ -97,8 +92,8 @@ namespace NewHopeFoodsharing.ActExport
 			table = new PdfPTable(2);
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
-			table.AddCell(C($"/ {S("ORG_REPRESENTER")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
-			table.AddCell(C($"/ {S("FS_VOLUNTEER")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"/ {S("organizationRepresenter")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"/ {S("volunteerName")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			document.Add(table);
 		}
 	}

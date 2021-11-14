@@ -58,6 +58,7 @@
     <Compile Include="DataSource\DataSourceMock.cs" />
     <Compile Include="DataSource\IDataSource.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
