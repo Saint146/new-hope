@@ -14,4 +14,8 @@ insert into product (name, product_category_id, measurement_id) values
 ('Хлеб дарницкий', 1, 1),
 ('Батон нарезной', 1, 1);
 
+insert into product (name, product_category_id, measurement_id) values
+('Апельсины', 2, 2),
+('Яблоки', 2, 2);
+
 commit;
