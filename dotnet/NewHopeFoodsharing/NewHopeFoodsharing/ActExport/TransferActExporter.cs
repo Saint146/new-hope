@@ -21,15 +21,15 @@ namespace NewHopeFoodsharing.ActExport
 			PdfPTable table = new PdfPTable(2);
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
-			table.AddCell(C(S("LOCALITY"), Element.ALIGN_LEFT, Rectangle.NO_BORDER));
-			table.AddCell(C(S("ACT_DATE"), Element.ALIGN_RIGHT, Rectangle.NO_BORDER));
+			table.AddCell(C(S("locality"), Element.ALIGN_LEFT, Rectangle.NO_BORDER));
+			table.AddCell(C(S("transferDate"), Element.ALIGN_RIGHT, Rectangle.NO_BORDER));
 			document.Add(table);
 
-			document.Add(Par($"{S("FS_NAME")}, именуемая в дальнейшем «Жертвователь», в лице {S("FS_VOLUNTEER_GENITIVE")}, действующего на основании {S("FS_VOLUNTEER_ACCORDANCE")}, " +
-			$"с одной стороны, и {S("TRANSFEREE")}, именуемый в дальнейшем «Одаряемый», с другой стороны, совместно именуемые «Стороны», " +
+			document.Add(Par($"{S("fsName")}, именуемая в дальнейшем «Жертвователь», в лице {S("volunteerNameGen")}, действующего на основании {S("volunteerAccordance")}, " +
+			$"с одной стороны, и {S("transfereeName")}, именуемый в дальнейшем «Одаряемый», с другой стороны, совместно именуемые «Стороны», " +
 			"составили настоящий Акт о нижеследующем:"));
 
-			document.Add(Par($"1. Жертвователь передал, а Одаряемый принял продовольственные товары в количестве {S("PRODUCTS_SUM_AMOUNT")} единиц."));
+			document.Add(Par($"1. Жертвователь передал, а Одаряемый принял продовольственные товары в количестве {S("productsTotalAmount")} единиц."));
 
 			document.Add(Par("2. Вышеуказанные продовольственные товары переданы безвозмездно."));
 
@@ -43,7 +43,7 @@ namespace NewHopeFoodsharing.ActExport
 			table.AddCell(C(border: Rectangle.NO_BORDER));
 			table.AddCell(C("Жертвователь", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			table.AddCell(C(border: Rectangle.NO_BORDER));
-			table.AddCell(C($"Одаряемый (тел. {S("TRANSFEREE_PHONE")})", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"Одаряемый (тел. {S("transfereePhone")})", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			table.AddCell(C(border: Rectangle.NO_BORDER));
 
 			table.AddCell(C(border: Rectangle.NO_BORDER));
@@ -62,13 +62,13 @@ namespace NewHopeFoodsharing.ActExport
 			table = new PdfPTable(2);
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
-			table.AddCell(C($"/ {S("FS_VOLUNTEER")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
-			table.AddCell(C($"/ {S("TRANSFEREE")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"/ {S("volunteerName")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"/ {S("transfereeName")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			document.Add(table);
 
 			document.Add(new Paragraph() { SpacingBefore = 45 });
-			document.Add(Par($"Настоящим даю согласие {S("FS_SHORT_NAME")} на любое законное использование изображения и/или видеозаписи с моим участием, " +
-			$"а также на обработку моих персональных данных для целей деятельности {S("FS_SHORT_NAME")}."));
+			document.Add(Par($"Настоящим даю согласие {S("fsShortName")} на любое законное использование изображения и/или видеозаписи с моим участием, " +
+			$"а также на обработку моих персональных данных для целей деятельности {S("fsShortName")}."));
 			document.Add(new Paragraph() { SpacingAfter = 10 });
 
 			table = new PdfPTable(4);
@@ -84,11 +84,11 @@ namespace NewHopeFoodsharing.ActExport
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
 			table.AddCell(C(border: Rectangle.NO_BORDER));
-			table.AddCell(C($"/ {S("TRANSFEREE")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"/ {S("transfereeName")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			document.Add(table);
 
 			document.Add(new Paragraph() { SpacingBefore = 45 });
-			document.Add(Par($"Настоящим подтверждаю наличие статуса получателя социальных льгот в соответствии с {S("TRANSFEREE_ACCORDANCE")}."));
+			document.Add(Par($"Настоящим подтверждаю наличие статуса получателя социальных льгот в соответствии с {S("transfereeAccordance")}."));
 			document.Add(new Paragraph() { SpacingAfter = 10 });
 
 			table = new PdfPTable(4);
@@ -104,7 +104,7 @@ namespace NewHopeFoodsharing.ActExport
 			table.WidthPercentage = 100;
 			table.SetWidths(new int[] { 50, 50 });
 			table.AddCell(C(border: Rectangle.NO_BORDER));
-			table.AddCell(C($"/ {S("TRANSFEREE")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
+			table.AddCell(C($"/ {S("transfereeName")} /", Element.ALIGN_CENTER, Rectangle.NO_BORDER));
 			document.Add(table);
 		}
 	}

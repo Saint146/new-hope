@@ -11,8 +11,6 @@ namespace NewHopeFoodsharing
 	{
 		static void Main(string[] args)
 		{
-			string fileName = string.Empty;
-
 			try
 			{
 #if DEBUG
@@ -34,18 +32,22 @@ namespace NewHopeFoodsharing
 				else
 					throw new Exception("Неверный тип акта. Возможные значения: -accept, -transfer");
 
-				fileName = args[1];
+				var dataFileName = args[1];
 
-#if DEBUG
-				fileName = @"C:\Users\saint\Desktop\Act.pdf";
-#endif
 				IDataSource source;
-
 #if DEBUG
 				source = new DataSourceMock(actType);
 #else
-				source = new DataSourceJson(dataJson);
+				source = new DataSourceJson(actType, File.ReadAllText(dataFileName));
 #endif
+
+				// поля, не передаваемые снаружи, но присутствующие в шаблоне
+				source.StringData.Add("annexNumber", "1");
+				source.StringData.Add("fsRepresenterGen", "Иванова Петра Сидоровича");
+				source.StringData.Add("fsRepresenterAccordance", "Устава");
+				source.StringData.Add("fsName", "Автономная некоммерческая организация «Национальный центр спасения еды и заботы об экологии «Фудшеринг» (Распределение продуктов)»");
+				source.StringData.Add("fsShortName", "АНО «Фудшеринг»");
+				source.StringData.Add("volunteerAccordance", "доверенности");
 
 				ActExporter exporter;
 
@@ -67,18 +69,22 @@ namespace NewHopeFoodsharing
 				else
 					return;
 
-				exporter.Export(fileName);
+				var fileName = exporter.Export(Path.ChangeExtension(dataFileName, ".pdf"));
+				Console.WriteLine(fileName);
 #if DEBUG
 				Process.Start(fileName);
 #endif
 			}
+#if DEBUG
+#else
 			catch (Exception ex)
 			{
 				Environment.ExitCode = 1;
 				Console.WriteLine(ex.ToString());
-
-				if (File.Exists(fileName))
-					File.WriteAllText(fileName, ex.ToString());
+			}
+#endif
+			finally
+			{
 			}
 		}
 	}

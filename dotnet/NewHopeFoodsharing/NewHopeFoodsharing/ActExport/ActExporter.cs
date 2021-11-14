@@ -27,6 +27,8 @@ namespace NewHopeFoodsharing.ActExport
 
 		public string Export(string fileName)
 		{
+			//var fileName = Path.GetTempFileName() + ".pdf";
+
 			FileStream fileStream = new FileStream(fileName, FileMode.Create);
 			try
 			{
@@ -53,6 +55,14 @@ namespace NewHopeFoodsharing.ActExport
 
 		protected string S(string stringId)
 		{
+			if (!StringData.ContainsKey(stringId))
+			{
+#if DEBUG
+				return $"[[{stringId}]]";
+#else
+				throw new Exception($"В данных не найдена строка с ключом {stringId}");
+#endif
+			}
 			return StringData[stringId];
 		}
 
